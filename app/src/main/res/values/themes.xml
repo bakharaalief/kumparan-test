@@ -30,12 +30,14 @@
 
     <style name="ItemPostTitleStyle" parent="BoldTheme">
         <item name="android:textSize">22sp</item>
-        <item name="android:textColor">@color/blue_kumpar</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAlignment">textStart</item>
     </style>
 
     <style name="ItemPostDescStyle" parent="RegularTheme">
         <item name="android:maxLines">3</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:textAlignment">textStart</item>
     </style>
 
     <style name="ItemIconStyle">
@@ -48,6 +50,43 @@
     <style name="ItemIconTextStyle" parent="LightTheme">
         <item name="android:textSize">16sp</item>
         <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="ErrorStyle">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_margin">18dp</item>
+    </style>
+
+    <style name="PostDetailTitle" parent="BoldTheme">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="PostDetailUserName" parent="BoldTheme">
+        <item name="android:textColor">@color/blue_kumpar</item>
+    </style>
+
+    <style name="PostDetailUserCompany" parent="LightTheme">
+
+    </style>
+
+    <style name="PostDetailDesc" parent="RegularTheme">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="SubHeadTheme" parent="BoldTheme">
+        <item name="android:textColor">@color/blue_kumpar</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ItemCommentNameStyle" parent="BoldTheme">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ItemCommentDescStyle" parent="RegularTheme">
+        <item name="android:textSize">13sp</item>
     </style>
 
 </resources>

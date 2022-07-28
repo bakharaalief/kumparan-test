@@ -1,17 +1,20 @@
 package com.bakharaalief.kumparantechnicaltest.presentation.main
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.bakharaalief.kumparantechnicaltest.R
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.bakharaalief.kumparantechnicaltest.data.remote.Result
 import com.bakharaalief.kumparantechnicaltest.databinding.ActivityMainBinding
+import com.bakharaalief.kumparantechnicaltest.presentation.ViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var mainViewModel: MainViewModel
+    private lateinit var postListAdapter: PostListAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +23,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setActionBar()
-        setBottomNav()
+        setUpViewModel()
+        setUpRv()
+        getAllPost()
     }
 
     private fun setActionBar() {
@@ -28,15 +33,52 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
     }
 
-    private fun setBottomNav() {
-        val navView = binding.bottomNavigation
-        val navController = findNavController(R.id.fragmentContainerView)
+    private fun setUpViewModel() {
+        val factory = ViewModelFactory.getInstance()
+        mainViewModel = ViewModelProvider(viewModelStore, factory)[MainViewModel::class.java]
+    }
 
-        val appBarConfiguration = AppBarConfiguration.Builder(
-            R.id.postFragment, R.id.photoFragment
-        ).build()
+    private fun setUpRv() {
+        postListAdapter = PostListAdapter { post, holder ->
+            mainViewModel.getUserDetail(post.userId).observe(this) { response ->
+                when (response) {
+                    is Result.Loading -> {
+                        holder.bind(post, null)
+                        holder.loading(true)
+                    }
+                    is Result.Success -> {
+                        holder.bind(post, response.data)
+                        holder.loading(false)
+                    }
+                    is Result.Error -> {
+                        holder.bind(post, null)
+                        holder.loading(false)
+                    }
+                }
+            }
+        }
+        binding.postRv.adapter = postListAdapter
+        binding.postRv.layoutManager = LinearLayoutManager(this)
+    }
 
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+    private fun getAllPost() {
+        mainViewModel.getAllPost().observe(this) { response ->
+            when (response) {
+                is Result.Loading -> showLoading(true)
+                is Result.Success -> {
+                    postListAdapter.submitList(response.data)
+                    showLoading(false)
+                }
+                is Result.Error -> {
+                    showLoading(false)
+                    binding.errorText.text = response.error
+                    binding.errorText.visibility = View.VISIBLE
+                }
+            }
+        }
+    }
+
+    private fun showLoading(status: Boolean) {
+        binding.loadingIndicator.visibility = if (status) View.VISIBLE else View.GONE
     }
 }

@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_post_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="18dp"
@@ -19,15 +20,14 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
             android:padding="15dp">
 
             <TextView
                 android:id="@+id/item_post_title"
                 style="@style/ItemPostTitleStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="sunt aut facere repellat" />
@@ -49,6 +49,7 @@
                 style="@style/ItemIconStyle"
                 android:contentDescription="@string/item_post_person_icon_desc"
                 android:src="@drawable/ic_baseline_person_24"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_post_desc" />
 
@@ -57,17 +58,19 @@
                 style="@style/ItemIconTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Leanne Graham"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/item_post_person_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/item_post_person_icon"
-                app:layout_constraintTop_toTopOf="@+id/item_post_person_icon" />
+                app:layout_constraintTop_toTopOf="@+id/item_post_person_icon"
+                tools:text="Leanne Graham" />
 
             <ImageView
                 android:id="@+id/item_post_company_icon"
                 style="@style/ItemIconStyle"
                 android:contentDescription="@string/item_person_company_icon_desc"
                 android:src="@drawable/ic_baseline_business_24"
+                android:visibility="invisible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/item_post_person_icon" />
 
@@ -76,11 +79,21 @@
                 style="@style/ItemIconTextStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Romaguera-Crona"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/item_post_company_icon"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/item_post_company_icon"
-                app:layout_constraintTop_toTopOf="@+id/item_post_company_icon" />
+                app:layout_constraintTop_toTopOf="@+id/item_post_company_icon"
+                tools:text="Romaguera-Crona" />
+
+            <ProgressBar
+                android:id="@+id/loading_indicator"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_post_desc" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

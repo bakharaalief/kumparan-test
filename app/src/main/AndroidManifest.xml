@@ -16,6 +16,12 @@
         android:theme="@style/Theme.KumparanTechnicalTest"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.postDetail.PostDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.main.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -24,9 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".presentation.main.MainActivity"
-            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"
