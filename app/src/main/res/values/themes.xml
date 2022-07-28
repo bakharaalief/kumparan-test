@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.KumparanTechnicalTest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_kumpar</item>
+        <item name="colorPrimaryVariant">@color/blue_kumpar</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="BoldTheme">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RegularTheme">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="LightTheme">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+
+    <style name="ItemPostTitleStyle" parent="BoldTheme">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/blue_kumpar</item>
+    </style>
+
+    <style name="ItemPostDescStyle" parent="RegularTheme">
+        <item name="android:maxLines">3</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ItemIconStyle">
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="tint">@color/blue_kumpar</item>
+    </style>
+
+    <style name="ItemIconTextStyle" parent="LightTheme">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+</resources>

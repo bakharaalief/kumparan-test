@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">KumparanTechnicalTest</string>
+    <string name="logo_kumpar_desc">logo kumpar desc</string>
+    <string name="image_toolbar_desc">image toolbar desc</string>
+    <string name="blogs">blogs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="post">Post</string>
+    <string name="photo">Photo</string>
+    <string name="item_post_person_icon_desc">item post person icon desc</string>
+    <string name="item_person_company_icon_desc">item person company icon desc</string>
+</resources>
