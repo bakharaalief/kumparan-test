@@ -1,9 +1,6 @@
 package com.bakharaalief.kumparantechnicaltest.data.remote.retrofit
 
-import com.bakharaalief.kumparantechnicaltest.data.remote.response.AlbumResponse
-import com.bakharaalief.kumparantechnicaltest.data.remote.response.CommentResponse
-import com.bakharaalief.kumparantechnicaltest.data.remote.response.PostResponse
-import com.bakharaalief.kumparantechnicaltest.data.remote.response.UserDetailResponse
+import com.bakharaalief.kumparantechnicaltest.data.remote.response.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -20,4 +17,7 @@ interface ApiService {
 
     @GET("posts/{id}/comments")
     suspend fun getPostComment(@Path("id") id: Int): List<CommentResponse>
+
+    @GET("albums/{id}/photos")
+    suspend fun getAlbumPhoto(@Path("id") id: Int): List<PhotoResponse>
 }

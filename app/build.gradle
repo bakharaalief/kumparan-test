@@ -63,4 +63,7 @@ dependencies {
 
     //circle image
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //touch image view
+    implementation 'com.github.MikeOrtiz:TouchImageView:1.4.1'
 }

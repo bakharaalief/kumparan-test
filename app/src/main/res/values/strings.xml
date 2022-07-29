@@ -23,4 +23,7 @@
     <string name="user_company_icon_desc">user company icon desc</string>
     <string name="item_album_cover_desc">item album cover desc</string>
     <string name="albums">Albums</string>
+    <string name="album_detail">Album Detail</string>
+    <string name="item_photo_thumbnail_desc">item photo thumbnail desc</string>
+    <string name="photo_detail">Photo Detail</string>
 </resources>

@@ -1,5 +1,6 @@
 package com.bakharaalief.kumparantechnicaltest.presentation.user
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -8,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bakharaalief.kumparantechnicaltest.R
 import com.bakharaalief.kumparantechnicaltest.databinding.ItemAlbumBinding
 import com.bakharaalief.kumparantechnicaltest.domain.model.Album
+import com.bakharaalief.kumparantechnicaltest.presentation.albumDetail.AlbumDetailActivity
 import com.bumptech.glide.Glide
 
 class AlbumListAdapter : ListAdapter<Album, AlbumListAdapter.MyViewHolder>(DIFF_CALLBACK) {
-
 
 
     class MyViewHolder(private val itemAlbumBinding: ItemAlbumBinding) :
@@ -29,6 +30,12 @@ class AlbumListAdapter : ListAdapter<Album, AlbumListAdapter.MyViewHolder>(DIFF_
                 .centerCrop()
                 .placeholder(R.drawable.ic_baseline_insert_photo_24)
                 .into(itemAlbumBinding.itemAlbumCover)
+
+            itemAlbumBinding.itemAlbumCard.setOnClickListener {
+                val intent = Intent(it.context, AlbumDetailActivity::class.java)
+                intent.putExtra(AlbumDetailActivity.ALBUM_EXTRA, album)
+                it.context.startActivity(intent)
+            }
         }
     }
 
@@ -52,7 +59,6 @@ class AlbumListAdapter : ListAdapter<Album, AlbumListAdapter.MyViewHolder>(DIFF_
             override fun areContentsTheSame(oldItem: Album, newItem: Album): Boolean {
                 return oldItem == newItem
             }
-
         }
     }
 }

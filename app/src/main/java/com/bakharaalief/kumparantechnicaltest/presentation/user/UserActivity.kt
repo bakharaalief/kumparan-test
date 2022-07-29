@@ -76,7 +76,7 @@ class UserActivity : AppCompatActivity() {
     private fun setUpRv() {
         albumListAdapter = AlbumListAdapter()
         binding.albumRv.adapter = albumListAdapter
-        binding.albumRv.layoutManager = GridLayoutManager(this, 2)
+        binding.albumRv.layoutManager = GridLayoutManager(this, gridCount)
         binding.albumRv.isNestedScrollingEnabled = false
     }
 
