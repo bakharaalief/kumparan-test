@@ -4,9 +4,11 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.bakharaalief.kumparantechnicaltest.data.remote.retrofit.ApiService
 import com.bakharaalief.kumparantechnicaltest.domain.model.Address
+import com.bakharaalief.kumparantechnicaltest.domain.model.Album
 import com.bakharaalief.kumparantechnicaltest.domain.model.Geo
 import com.bakharaalief.kumparantechnicaltest.domain.model.User
 import com.bakharaalief.kumparantechnicaltest.domain.repository.IUserRepository
+import com.bakharaalief.kumparantechnicaltest.util.DataMapper
 
 class UserRepository(private val apiService: ApiService) : IUserRepository {
 
@@ -39,6 +41,17 @@ class UserRepository(private val apiService: ApiService) : IUserRepository {
             )
 
             emit(Result.Success(user))
+        } catch (e: Exception) {
+            emit(Result.Error(e.message.toString()))
+        }
+    }
+
+    override fun getUserAlbum(userId: Int): LiveData<Result<List<Album>>> = liveData {
+        emit(Result.Loading)
+
+        try {
+            val listAlbum = apiService.getUserAlbum(userId)
+            emit(Result.Success(DataMapper.albumResponseToModel(listAlbum)))
         } catch (e: Exception) {
             emit(Result.Error(e.message.toString()))
         }

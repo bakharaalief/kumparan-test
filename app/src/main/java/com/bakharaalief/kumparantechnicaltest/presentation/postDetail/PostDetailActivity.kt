@@ -1,7 +1,7 @@
 package com.bakharaalief.kumparantechnicaltest.presentation.postDetail
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +13,7 @@ import com.bakharaalief.kumparantechnicaltest.databinding.ActivityPostDetailBind
 import com.bakharaalief.kumparantechnicaltest.domain.model.Post
 import com.bakharaalief.kumparantechnicaltest.domain.model.User
 import com.bakharaalief.kumparantechnicaltest.presentation.ViewModelFactory
+import com.bakharaalief.kumparantechnicaltest.presentation.user.UserActivity
 import com.bumptech.glide.Glide
 
 class PostDetailActivity : AppCompatActivity() {
@@ -40,6 +41,11 @@ class PostDetailActivity : AppCompatActivity() {
         setUpViewModel()
         setUpRv()
         getAllComment()
+
+        //click user profile
+        binding.postDetailUserPhoto.setOnClickListener {
+            toUserActivity()
+        }
     }
 
     private fun setUpActionBar() {
@@ -59,8 +65,6 @@ class PostDetailActivity : AppCompatActivity() {
     private fun setPostData() {
         binding.postDetailTitle.text = post.title
         binding.postDetailDesc.text = post.body
-
-        Log.d("test", post.body)
     }
 
     private fun setUserData() {
@@ -72,6 +76,12 @@ class PostDetailActivity : AppCompatActivity() {
             .centerCrop()
             .placeholder(R.drawable.ic_baseline_insert_photo_24)
             .into(binding.postDetailUserPhoto)
+    }
+
+    private fun toUserActivity() {
+        val intent = Intent(this, UserActivity::class.java)
+        intent.putExtra(USER_EXTRA, user)
+        startActivity(intent)
     }
 
     private fun setUpViewModel() {

@@ -6,12 +6,15 @@
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/drawable/ic_baseline_insert_photo_24.xml" value="0.1895" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/drawable/ic_baseline_list_alt_24.xml" value="0.1895" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/drawable/ic_image_1.xml" value="0.1895" />
+        <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/activity_album_detail.xml" value="0.259375" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/activity_post_detail.xml" value="0.1" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/activity_post_detail2.xml" value="0.11614583333333334" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/activity_user.xml" value="0.259375" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/fragment_photo.xml" value="0.2453125" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/fragment_post.xml" value="0.259375" />
+        <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/item_album.xml" value="0.1259825327510917" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/item_comment.xml" value="0.25833333333333336" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/layout/item_post.xml" value="0.19704433497536947" />
         <entry key="..\:/projects/android/KumparanTechnicalTest/app/src/main/res/menu/main_bottom_menu.xml" value="0.259375" />
@@ -24,5 +27,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1259825327510917" />
+      </ProjectState>
+    </option>
   </component>
 </project>

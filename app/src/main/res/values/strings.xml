@@ -20,4 +20,7 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="kumparan_news">Kumparan News</string>
     <string name="comments">Comments</string>
+    <string name="user_company_icon_desc">user company icon desc</string>
+    <string name="item_album_cover_desc">item album cover desc</string>
+    <string name="albums">Albums</string>
 </resources>

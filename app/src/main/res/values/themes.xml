@@ -76,17 +76,32 @@
     </style>
 
     <style name="SubHeadTheme" parent="BoldTheme">
-        <item name="android:textColor">@color/blue_kumpar</item>
+        <item name="android:textColor">@color/black</item>
         <item name="android:textSize">18sp</item>
     </style>
 
     <style name="ItemCommentNameStyle" parent="BoldTheme">
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/blue_kumpar</item>
         <item name="android:textSize">14sp</item>
     </style>
 
     <style name="ItemCommentDescStyle" parent="RegularTheme">
         <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="UserNameStyle" parent="BoldTheme">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="UserIconStyle" parent="ItemIconStyle">
+        <item name="android:layout_width">22dp</item>
+        <item name="android:layout_height">22dp</item>
+        <item name="android:layout_marginStart">15sp</item>
+    </style>
+
+    <style name="UserIconTextStyle" parent="LightTheme">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>

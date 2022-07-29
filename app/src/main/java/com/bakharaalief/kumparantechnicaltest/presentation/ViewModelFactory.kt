@@ -7,6 +7,7 @@ import com.bakharaalief.kumparantechnicaltest.domain.usecase.PostUseCase
 import com.bakharaalief.kumparantechnicaltest.domain.usecase.UserUseCase
 import com.bakharaalief.kumparantechnicaltest.presentation.main.MainViewModel
 import com.bakharaalief.kumparantechnicaltest.presentation.postDetail.PostDetailViewModel
+import com.bakharaalief.kumparantechnicaltest.presentation.user.UserViewModel
 
 class ViewModelFactory(
     private val postUseCase: PostUseCase,
@@ -23,6 +24,9 @@ class ViewModelFactory(
             ) as T
             modelClass.isAssignableFrom(PostDetailViewModel::class.java) -> PostDetailViewModel(
                 postUseCase
+            ) as T
+            modelClass.isAssignableFrom(UserViewModel::class.java) -> UserViewModel(
+                userUseCase
             ) as T
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

@@ -1,7 +1,9 @@
 package com.bakharaalief.kumparantechnicaltest.util
 
+import com.bakharaalief.kumparantechnicaltest.data.remote.response.AlbumResponse
 import com.bakharaalief.kumparantechnicaltest.data.remote.response.CommentResponse
 import com.bakharaalief.kumparantechnicaltest.data.remote.response.PostResponse
+import com.bakharaalief.kumparantechnicaltest.domain.model.Album
 import com.bakharaalief.kumparantechnicaltest.domain.model.Comment
 import com.bakharaalief.kumparantechnicaltest.domain.model.Post
 import com.bakharaalief.kumparantechnicaltest.util.StringHelper.capitalized
@@ -22,11 +24,21 @@ object DataMapper {
     fun commentResponseToModel(input: List<CommentResponse>): List<Comment> {
         return input.map {
             Comment(
-                it.name,
+                it.name.titleCase(),
                 it.postId,
                 it.id,
                 it.body,
                 it.email
+            )
+        }
+    }
+
+    fun albumResponseToModel(input: List<AlbumResponse>): List<Album> {
+        return input.map {
+            Album(
+                it.userId,
+                it.id,
+                it.title
             )
         }
     }
