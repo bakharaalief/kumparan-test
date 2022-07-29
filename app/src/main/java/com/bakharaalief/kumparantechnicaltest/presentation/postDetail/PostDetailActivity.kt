@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bakharaalief.kumparantechnicaltest.R
-import com.bakharaalief.kumparantechnicaltest.data.remote.Result
+import com.bakharaalief.kumparantechnicaltest.data.Result
 import com.bakharaalief.kumparantechnicaltest.databinding.ActivityPostDetailBinding
 import com.bakharaalief.kumparantechnicaltest.domain.model.Post
 import com.bakharaalief.kumparantechnicaltest.domain.model.User

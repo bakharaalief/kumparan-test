@@ -1,4 +1,4 @@
-package com.bakharaalief.kumparantechnicaltest.data.remote
+package com.bakharaalief.kumparantechnicaltest.data
 
 sealed class Result<out R> private constructor() {
     data class Success<out T>(val data: T) : Result<T>()

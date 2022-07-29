@@ -5,7 +5,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bakharaalief.kumparantechnicaltest.data.remote.Result
+import com.bakharaalief.kumparantechnicaltest.data.Result
 import com.bakharaalief.kumparantechnicaltest.databinding.ActivityMainBinding
 import com.bakharaalief.kumparantechnicaltest.presentation.ViewModelFactory
 
