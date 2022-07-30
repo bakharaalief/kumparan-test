@@ -13,10 +13,12 @@ object Injection {
 
     private val apiService = ApiConfig.getApiService()
 
+    //inject api service
     private fun providePostRepository(): IPostRepository = PostRepository.getInstance(apiService)
     private fun provideUserRepository(): IUserRepository = UserRepository.getInstance(apiService)
     private fun provideAlbumRepository(): IAlbumRepository = AlbumRepository.getInstance(apiService)
 
+    //inject to use case
     fun providePostUseCase(): PostUseCase = PostUseCaseImpl(providePostRepository())
     fun provideUserUseCase(): UserUseCase = UserUseCaseImpl(provideUserRepository())
     fun provideAlbumUseCase(): AlbumUseCase = AlbumUseCaseImpl(provideAlbumRepository())

@@ -10,7 +10,7 @@ import com.bakharaalief.kumparantechnicaltest.databinding.ItemCommentBinding
 import com.bakharaalief.kumparantechnicaltest.domain.model.Comment
 import com.bumptech.glide.Glide
 
-class CommentListAdapter() : ListAdapter<Comment, CommentListAdapter.MyViewHolder>(DIFF_CALLBACK) {
+class CommentListAdapter : ListAdapter<Comment, CommentListAdapter.MyViewHolder>(DIFF_CALLBACK) {
 
     class MyViewHolder(private val itemCommentBinding: ItemCommentBinding) :
         RecyclerView.ViewHolder(itemCommentBinding.root) {

@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import com.bakharaalief.kumparantechnicaltest.data.Result
 import com.bakharaalief.kumparantechnicaltest.domain.model.Comment
 import com.bakharaalief.kumparantechnicaltest.domain.model.Post
-import com.bakharaalief.kumparantechnicaltest.domain.model.User
 
 interface PostUseCase {
 

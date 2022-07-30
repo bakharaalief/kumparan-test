@@ -16,15 +16,11 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            style="@style/ToolbarTheme"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:backgroundTint="@color/white"
-            android:elevation="10dp"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:navigationIconTint="@color/blue_kumpar"
-            app:title="@string/photo_detail"
-            app:titleTextColor="@color/black" />
+            app:title="@string/photo_detail" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -36,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        tools:src="@drawable/ic_launcher_background" />
+        tools:src="@drawable/ic_baseline_insert_photo_24" />
 
     <TextView
         android:id="@+id/photo_detail_name"

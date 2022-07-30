@@ -19,14 +19,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="15dp">
+            android:padding="12dp">
 
             <ImageView
                 android:id="@+id/item_album_cover"
-                android:layout_width="140dp"
-                android:layout_height="140dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:contentDescription="@string/item_album_cover_desc"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/ic_baseline_insert_photo_24"
+                app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

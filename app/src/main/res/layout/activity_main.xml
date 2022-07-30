@@ -16,11 +16,9 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topAppBar"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            style="@style/ToolbarTheme"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:backgroundTint="@color/white"
-            android:elevation="10dp">
+            android:layout_height="?attr/actionBarSize">
 
             <ImageView
                 android:id="@+id/image_toolbar"
@@ -58,7 +56,7 @@
         style="@style/ErrorStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
