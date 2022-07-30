@@ -5,5 +5,5 @@ import com.bakharaalief.kumparantechnicaltest.domain.usecase.PostUseCase
 
 class PostDetailViewModel(private val postUseCase: PostUseCase) : ViewModel() {
 
-    fun listComment(postId: Int) = postUseCase.getPostComment(postId)
+    fun postComment(postId: Int) = postUseCase.getPostComment(postId)
 }

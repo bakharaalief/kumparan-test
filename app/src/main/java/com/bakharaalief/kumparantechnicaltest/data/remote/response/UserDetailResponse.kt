@@ -8,7 +8,7 @@ data class UserDetailResponse(
     val website: String,
 
     @field:SerializedName("address")
-    val address: Address,
+    val address: AddressResponse,
 
     @field:SerializedName("phone")
     val phone: String,
@@ -17,7 +17,7 @@ data class UserDetailResponse(
     val name: String,
 
     @field:SerializedName("company")
-    val company: Company,
+    val company: CompanyResponse,
 
     @field:SerializedName("id")
     val id: Int,
@@ -29,13 +29,13 @@ data class UserDetailResponse(
     val username: String
 )
 
-data class Address(
+data class AddressResponse(
 
     @field:SerializedName("zipcode")
     val zipcode: String,
 
     @field:SerializedName("geo")
-    val geo: Geo,
+    val geo: GeoResponse,
 
     @field:SerializedName("suite")
     val suite: String,
@@ -47,7 +47,7 @@ data class Address(
     val street: String
 )
 
-data class Geo(
+data class GeoResponse(
 
     @field:SerializedName("lng")
     val lng: String,
@@ -56,7 +56,7 @@ data class Geo(
     val lat: String
 )
 
-data class Company(
+data class CompanyResponse(
 
     @field:SerializedName("bs")
     val bs: String,

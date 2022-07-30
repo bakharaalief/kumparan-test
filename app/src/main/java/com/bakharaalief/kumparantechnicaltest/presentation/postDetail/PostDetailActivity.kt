@@ -97,7 +97,7 @@ class PostDetailActivity : AppCompatActivity() {
     }
 
     private fun getAllComment() {
-        postDetailViewModel.listComment(post.id).observe(this) { response ->
+        postDetailViewModel.postComment(post.id).observe(this) { response ->
             when (response) {
                 is Result.Loading -> {
                     showLoading(true)
