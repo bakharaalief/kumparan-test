@@ -2,7 +2,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/item_album_card"
@@ -38,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/roboto"
-                android:text="quidem molestiae enim"
+                tools:text="quidem molestiae enim"
                 android:textAlignment="center"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
