@@ -10,6 +10,7 @@ Kumparan Android Developer Technical Test<br>
 - See user detail and list albums inside user detail
 - see album detail and list photo inside album detail
 - see photo detail and you can zoom in / out photo
+- support in dark theme mode
 
 ## How to run locally ?
 Clone project
@@ -34,11 +35,7 @@ I use clean architecture for this app and divide the app into several folders
 - [Mockito](https://github.com/mockito/mockito) - mock object for unit testing
 
 ## Screenshot
-<img src="./preview/image-1.png" width="200" />
-<img src="./preview/image-2.png" width="200" />
-<img src="./preview/image-3.png" width="200" />
-<img src="./preview/image-4.png" width="200" />
-<img src="./preview/image-5.png" width="200" />
-<img src="./preview/image-6.png" width="200" />
+<img src="./preview/preview-1.png"/>
+<img src="./preview/preview-2.png" />
 
 
